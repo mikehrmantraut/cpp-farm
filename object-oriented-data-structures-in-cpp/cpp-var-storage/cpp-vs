@@ -1,0 +1,37 @@
+#include <iostream>
+
+namespace uiuc {
+class Cube {
+  public:
+    double getVolume(){
+        return length_ * length_ * length_;
+    };
+    double getSurfaceArea(){
+        return 6 * length_ * length_;
+    };
+    void setLength(double length){
+        length_ = length;
+    };
+  private: 
+    double length_;
+};
+}
+
+int main(){
+    uiuc::Cube c; // stores a cube in memory
+    int i;        // stores an integer in memory
+    
+    uiuc::Cube *cc; // pointer to a Cube in memory
+    int  *ii;       // pointer to an integer in memory
+
+    // A reference is an alias to existing memory and is denoted
+    // in the type with an ampersand (&)
+    // A reference does not store memory itself, it is only an
+    // alias to another variable
+
+    uiuc::Cube cube;
+    uiuc::Cube &ccc = cube;
+    //int &iii; // declared as reference but not initialized
+    
+
+}
